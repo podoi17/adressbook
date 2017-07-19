@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    margin: 0;
+    height: 100vh;
+}
+
+.main-wrapper {
+    flex: 1 0 75%;
+}
+
+.contacts-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+#filter-form {
+    display: flex;
+
+}
+
+.filter {
+    flex:1 0 auto;
+    margin-right: 16px;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.button {
+    background: linear-gradient(to bottom, #ffffff 1%,#eee 100%);
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 12px 16px;
+}
+
+.table-header {
+    background: linear-gradient(to bottom, #ffffff 1%,#eee 100%);
+}
+
+.table-header-row th {
+    font-weight: 300;
+    border: 1px solid #CCC;
+    padding: 8px;
+    text-align: left;
+}
+
+.table-body-row td {
+    font-weight: 300;
+    border: 1px solid #CCC;
+    padding: 8px;
+    text-align: left;
+}
+
+/*nth child hat höhre weertigkeit daher würde row--
+selected nicht greifen, durch not wird die wertigkeit ausgesetzt*/
+.table-body-row:nth-child(2n):not(.table-body-row--selected) td {
+    background-color: #EEE;
+}
+
+.table-body-row--selected td {
+    background-color: #3993DD;
+    color: #FFF;
+}
+
+.aside-wrapper {
+    padding: 0;
+    flex: 0 0 0%;
+    background-color: #EEE;
+    overflow: hidden;
+    transition: flex-basis ease-in-out .3s;
+}
+
+.aside-wrapper[aria-hidden="false"] {
+    flex-basis: 25%;
+    padding: 8px;
+}
+
+#editing-form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#editing-form > .button {
+    margin: 8px 0;
+}
+
+
+.contact-input {
+    padding: 8px 4px;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+
+
